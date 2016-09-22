@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2306548D1D9427950020A0AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2306548C1D9427950020A0AB /* main.m */; };
+		230654951D9429020020A0AB /* ftpProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 230654941D9429020020A0AB /* ftpProgress.m */; settings = {ASSET_TAGS = (); }; };
+		230654981D942A7A0020A0AB /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 230654961D942A7A0020A0AB /* empty.cpp */; settings = {ASSET_TAGS = (); }; };
+		2306549C1D942ADF0020A0AB /* libchilkatCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2306549B1D942ADF0020A0AB /* libchilkatCocoa.a */; };
+		2306549E1D942B490020A0AB /* ftp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2306549D1D942B490020A0AB /* ftp.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		230654871D9427950020A0AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		230654891D9427950020A0AB /* Chilkat_ObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chilkat_ObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
+		2306548C1D9427950020A0AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		230654931D9428B70020A0AB /* ftpProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ftpProgress.h; sourceTree = "<group>"; };
+		230654941D9429020020A0AB /* ftpProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftpProgress.m; sourceTree = "<group>"; };
+		230654961D942A7A0020A0AB /* empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = empty.cpp; sourceTree = "<group>"; };
+		230654971D942A7A0020A0AB /* empty.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = empty.hpp; sourceTree = "<group>"; };
+		230654991D942ACC0020A0AB /* Chilkat_ObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chilkat_ObjectiveC; sourceTree = "<group>"; };
+		2306549B1D942ADF0020A0AB /* libchilkatCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchilkatCocoa.a; path = Chilkat_ObjectiveC/chilkat/lib/libchilkatCocoa.a; sourceTree = "<group>"; };
+		2306549D1D942B490020A0AB /* ftp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftp.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		230654861D9427950020A0AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2306549C1D942ADF0020A0AB /* libchilkatCocoa.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		230654801D9427950020A0AB = {
+			isa = PBXGroup;
+			children = (
+				2306549B1D942ADF0020A0AB /* libchilkatCocoa.a */,
+				230654991D942ACC0020A0AB /* Chilkat_ObjectiveC */,
+				2306548B1D9427950020A0AB /* Chilkat_ObjectiveC */,
+				2306548A1D9427950020A0AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2306548A1D9427950020A0AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				230654891D9427950020A0AB /* Chilkat_ObjectiveC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2306548B1D9427950020A0AB /* Chilkat_ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				2306548C1D9427950020A0AB /* main.m */,
+				230654931D9428B70020A0AB /* ftpProgress.h */,
+				230654941D9429020020A0AB /* ftpProgress.m */,
+				230654961D942A7A0020A0AB /* empty.cpp */,
+				230654971D942A7A0020A0AB /* empty.hpp */,
+				2306549D1D942B490020A0AB /* ftp.m */,
+			);
+			path = Chilkat_ObjectiveC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		230654881D9427950020A0AB /* Chilkat_ObjectiveC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 230654901D9427950020A0AB /* Build configuration list for PBXNativeTarget "Chilkat_ObjectiveC" */;
+			buildPhases = (
+				230654851D9427950020A0AB /* Sources */,
+				230654861D9427950020A0AB /* Frameworks */,
+				230654871D9427950020A0AB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chilkat_ObjectiveC;
+			productName = Chilkat_ObjectiveC;
+			productReference = 230654891D9427950020A0AB /* Chilkat_ObjectiveC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		230654811D9427950020A0AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Chilkat;
+				TargetAttributes = {
+					230654881D9427950020A0AB = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 230654841D9427950020A0AB /* Build configuration list for PBXProject "Chilkat_ObjectiveC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 230654801D9427950020A0AB;
+			productRefGroup = 2306548A1D9427950020A0AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				230654881D9427950020A0AB /* Chilkat_ObjectiveC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		230654851D9427950020A0AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2306548D1D9427950020A0AB /* main.m in Sources */,
+				230654951D9429020020A0AB /* ftpProgress.m in Sources */,
+				2306549E1D942B490020A0AB /* ftp.m in Sources */,
+				230654981D942A7A0020A0AB /* empty.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2306548E1D9427950020A0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2306548F1D9427950020A0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		230654911D9427950020A0AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chilkat_ObjectiveC/chilkat/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		230654921D9427950020A0AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chilkat_ObjectiveC/chilkat/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		230654841D9427950020A0AB /* Build configuration list for PBXProject "Chilkat_ObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2306548E1D9427950020A0AB /* Debug */,
+				2306548F1D9427950020A0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		230654901D9427950020A0AB /* Build configuration list for PBXNativeTarget "Chilkat_ObjectiveC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230654911D9427950020A0AB /* Debug */,
+				230654921D9427950020A0AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 230654811D9427950020A0AB /* Project object */;
+}
