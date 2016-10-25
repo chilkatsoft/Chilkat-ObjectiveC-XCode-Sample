@@ -1,11 +1,13 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Ftp2
 // Wrapped Chilkat C++ class name =  CkFtp2
 
 @class CkoTask;
 @class CkoDateTime;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoCert;
 
 
@@ -271,10 +273,24 @@
 // method: GetFileAsync
 - (CkoTask *)GetFileAsync: (NSString *)remoteFilename 
 	localPath: (NSString *)localPath;
+// method: GetFileBd
+- (BOOL)GetFileBd: (NSString *)remoteFilePath 
+	binData: (CkoBinData *)binData;
+// method: GetFileBdAsync
+- (CkoTask *)GetFileBdAsync: (NSString *)remoteFilePath 
+	binData: (CkoBinData *)binData;
 // method: GetFilename
 - (NSString *)GetFilename: (NSNumber *)index;
 // method: GetFilenameAsync
 - (CkoTask *)GetFilenameAsync: (NSNumber *)index;
+// method: GetFileSb
+- (BOOL)GetFileSb: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
+// method: GetFileSbAsync
+- (CkoTask *)GetFileSbAsync: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
 // method: GetGroup
 - (NSString *)GetGroup: (NSNumber *)index;
 // method: GetGroupAsync
@@ -421,6 +437,12 @@
 // method: PutFileAsync
 - (CkoTask *)PutFileAsync: (NSString *)localPath 
 	remoteFilename: (NSString *)remoteFilename;
+// method: PutFileBd
+- (BOOL)PutFileBd: (CkoBinData *)binData 
+	remoteFilePath: (NSString *)remoteFilePath;
+// method: PutFileBdAsync
+- (CkoTask *)PutFileBdAsync: (CkoBinData *)binData 
+	remoteFilePath: (NSString *)remoteFilePath;
 // method: PutFileFromBinaryData
 - (BOOL)PutFileFromBinaryData: (NSString *)remoteFilename 
 	binaryData: (NSData *)binaryData;
@@ -435,6 +457,16 @@
 - (CkoTask *)PutFileFromTextDataAsync: (NSString *)remoteFilename 
 	textData: (NSString *)textData 
 	charset: (NSString *)charset;
+// method: PutFileSb
+- (BOOL)PutFileSb: (CkoStringBuilder *)sb 
+	charset: (NSString *)charset 
+	includeBom: (BOOL)includeBom 
+	remoteFilePath: (NSString *)remoteFilePath;
+// method: PutFileSbAsync
+- (CkoTask *)PutFileSbAsync: (CkoStringBuilder *)sb 
+	charset: (NSString *)charset 
+	includeBom: (BOOL)includeBom 
+	remoteFilePath: (NSString *)remoteFilePath;
 // method: PutPlan
 - (BOOL)PutPlan: (NSString *)planUtf8 
 	planLogFilePath: (NSString *)planLogFilePath;

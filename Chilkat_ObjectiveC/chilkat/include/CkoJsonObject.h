@@ -1,10 +1,11 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  JsonObject
 // Wrapped Chilkat C++ class name =  CkJsonObject
 
 @class CkoJsonArray;
+@class CkoStringBuilder;
 
 
 @interface CkoJsonObject : NSObject {
@@ -89,6 +90,8 @@
 - (BOOL)DeleteAt: (NSNumber *)index;
 // method: Emit
 - (NSString *)Emit;
+// method: EmitSb
+- (BOOL)EmitSb: (CkoStringBuilder *)sb;
 // method: FirebaseApplyEvent
 - (BOOL)FirebaseApplyEvent: (NSString *)name 
 	data: (NSString *)data;
@@ -116,6 +119,8 @@
 - (BOOL)Load: (NSString *)json;
 // method: LoadFile
 - (BOOL)LoadFile: (NSString *)path;
+// method: LoadSb
+- (BOOL)LoadSb: (CkoStringBuilder *)sb;
 // method: NameAt
 - (NSString *)NameAt: (NSNumber *)index;
 // method: ObjectAt

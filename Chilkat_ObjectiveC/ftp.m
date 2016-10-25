@@ -11,19 +11,6 @@
 #import "ftpProgress.h"
 #import "chilkat/include/CkoFtp2.h"
 
-BOOL ftp_unlock()
-{
-    CkoFtp2 *ftp = [[CkoFtp2 alloc] init];
-    
-    //  Any string unlocks the component for the 1st 30-days.
-    BOOL success = [ftp UnlockComponent: @"Anything for 30-day trial"];
-    if (success != YES) {
-        NSLog(@"%@",ftp.LastErrorText);
-        return NO;
-    }
-
-    return YES;
-}
 
 void ftp_settings(CkoFtp2 *ftp)
 {

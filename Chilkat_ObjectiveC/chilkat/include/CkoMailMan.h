@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  MailMan
 // Wrapped Chilkat C++ class name =  CkMailMan
@@ -9,6 +9,8 @@
 @class CkoEmail;
 @class CkoStringArray;
 @class CkoCert;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoPrivateKey;
 @class CkoSshKey;
 @class CkoXmlCertVault;
@@ -331,8 +333,14 @@
 	smtpServer: (NSString *)smtpServer;
 // method: RenderToMime
 - (NSString *)RenderToMime: (CkoEmail *)email;
+// method: RenderToMimeBd
+- (BOOL)RenderToMimeBd: (CkoEmail *)email 
+	renderedMime: (CkoBinData *)renderedMime;
 // method: RenderToMimeBytes
 - (NSData *)RenderToMimeBytes: (CkoEmail *)email;
+// method: RenderToMimeSb
+- (BOOL)RenderToMimeSb: (CkoEmail *)email 
+	renderedMime: (CkoStringBuilder *)renderedMime;
 // method: SaveLastError
 - (BOOL)SaveLastError: (NSString *)path;
 // method: SendBundle

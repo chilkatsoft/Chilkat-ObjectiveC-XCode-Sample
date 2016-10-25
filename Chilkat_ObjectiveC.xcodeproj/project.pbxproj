@@ -12,6 +12,8 @@
 		230654981D942A7A0020A0AB /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 230654961D942A7A0020A0AB /* empty.cpp */; settings = {ASSET_TAGS = (); }; };
 		2306549C1D942ADF0020A0AB /* libchilkatCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2306549B1D942ADF0020A0AB /* libchilkatCocoa.a */; };
 		2306549E1D942B490020A0AB /* ftp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2306549D1D942B490020A0AB /* ftp.m */; settings = {ASSET_TAGS = (); }; };
+		2384881C1DBF96B8002E6E35 /* http.m in Sources */ = {isa = PBXBuildFile; fileRef = 238488191DBF96B8002E6E35 /* http.m */; settings = {ASSET_TAGS = (); }; };
+		2384881D1DBF96B8002E6E35 /* httpProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2384881B1DBF96B8002E6E35 /* httpProgress.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,9 @@
 		230654991D942ACC0020A0AB /* Chilkat_ObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chilkat_ObjectiveC; sourceTree = "<group>"; };
 		2306549B1D942ADF0020A0AB /* libchilkatCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libchilkatCocoa.a; path = Chilkat_ObjectiveC/chilkat/lib/libchilkatCocoa.a; sourceTree = "<group>"; };
 		2306549D1D942B490020A0AB /* ftp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ftp.m; sourceTree = "<group>"; };
+		238488191DBF96B8002E6E35 /* http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = http.m; sourceTree = "<group>"; };
+		2384881A1DBF96B8002E6E35 /* httpProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpProgress.h; sourceTree = "<group>"; };
+		2384881B1DBF96B8002E6E35 /* httpProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpProgress.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,9 @@
 		2306548B1D9427950020A0AB /* Chilkat_ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				238488191DBF96B8002E6E35 /* http.m */,
+				2384881A1DBF96B8002E6E35 /* httpProgress.h */,
+				2384881B1DBF96B8002E6E35 /* httpProgress.m */,
 				2306548C1D9427950020A0AB /* main.m */,
 				230654931D9428B70020A0AB /* ftpProgress.h */,
 				230654941D9429020020A0AB /* ftpProgress.m */,
@@ -137,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2384881C1DBF96B8002E6E35 /* http.m in Sources */,
 				2306548D1D9427950020A0AB /* main.m in Sources */,
+				2384881D1DBF96B8002E6E35 /* httpProgress.m in Sources */,
 				230654951D9429020020A0AB /* ftpProgress.m in Sources */,
 				2306549E1D942B490020A0AB /* ftp.m in Sources */,
 				230654981D942A7A0020A0AB /* empty.cpp in Sources */,
@@ -265,6 +275,7 @@
 				230654921D9427950020A0AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

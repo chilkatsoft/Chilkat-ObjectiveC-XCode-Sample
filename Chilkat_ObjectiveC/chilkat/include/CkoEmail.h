@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Email
 // Wrapped Chilkat C++ class name =  CkEmail
@@ -7,6 +7,8 @@
 @class CkoCert;
 @class CkoStringArray;
 @class CkoDateTime;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoCertChain;
 @class CkoTask;
 @class CkoPrivateKey;
@@ -323,8 +325,12 @@
 - (NSData *)GetMbPlainTextBody: (NSString *)charset;
 // method: GetMime
 - (NSString *)GetMime;
+// method: GetMimeBd
+- (BOOL)GetMimeBd: (CkoBinData *)bindat;
 // method: GetMimeBinary
 - (NSData *)GetMimeBinary;
+// method: GetMimeSb
+- (BOOL)GetMimeSb: (CkoStringBuilder *)sb;
 // method: GetNthBinaryPartOfType
 - (NSData *)GetNthBinaryPartOfType: (NSNumber *)index 
 	contentType: (NSString *)contentType 
@@ -461,11 +467,15 @@
 	charset: (NSString *)charset;
 // method: SetEncryptCert
 - (BOOL)SetEncryptCert: (CkoCert *)cert;
+// method: SetFromMimeBd
+- (BOOL)SetFromMimeBd: (CkoBinData *)bindat;
 // method: SetFromMimeBytes
 - (BOOL)SetFromMimeBytes: (NSData *)mimeBytes;
 // method: SetFromMimeBytes2
 - (BOOL)SetFromMimeBytes2: (NSData *)mimeBytes 
 	charset: (NSString *)charset;
+// method: SetFromMimeSb
+- (BOOL)SetFromMimeSb: (CkoStringBuilder *)sb;
 // method: SetFromMimeText
 - (BOOL)SetFromMimeText: (NSString *)mimeText;
 // method: SetFromXmlText

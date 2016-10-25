@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  SFtp
 // Wrapped Chilkat C++ class name =  CkSFtp
@@ -7,6 +7,8 @@
 @class CkoTask;
 @class CkoSshKey;
 @class CkoSsh;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoDateTime;
 @class CkoSFtpDir;
 
@@ -160,6 +162,12 @@
 - (CkoTask *)CreateDirAsync: (NSString *)path;
 // method: Disconnect
 - (void)Disconnect;
+// method: DownloadBd
+- (BOOL)DownloadBd: (NSString *)remoteFilePath 
+	binData: (CkoBinData *)binData;
+// method: DownloadBdAsync
+- (CkoTask *)DownloadBdAsync: (NSString *)remoteFilePath 
+	binData: (CkoBinData *)binData;
 // method: DownloadFile
 - (BOOL)DownloadFile: (NSString *)sftpHandle 
 	toFilePath: (NSString *)toFilePath;
@@ -172,6 +180,14 @@
 // method: DownloadFileByNameAsync
 - (CkoTask *)DownloadFileByNameAsync: (NSString *)remoteFilePath 
 	localFilePath: (NSString *)localFilePath;
+// method: DownloadSb
+- (BOOL)DownloadSb: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
+// method: DownloadSbAsync
+- (CkoTask *)DownloadSbAsync: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
 // method: Eof
 - (BOOL)Eof: (NSString *)sftpHandle;
 // method: GetFileCreateDt
@@ -443,6 +459,12 @@
 	bRecurse: (BOOL)bRecurse;
 // method: UnlockComponent
 - (BOOL)UnlockComponent: (NSString *)unlockCode;
+// method: UploadBd
+- (BOOL)UploadBd: (CkoBinData *)binData 
+	remoteFilePath: (NSString *)remoteFilePath;
+// method: UploadBdAsync
+- (CkoTask *)UploadBdAsync: (CkoBinData *)binData 
+	remoteFilePath: (NSString *)remoteFilePath;
 // method: UploadFile
 - (BOOL)UploadFile: (NSString *)sftpHandle 
 	fromFilePath: (NSString *)fromFilePath;
@@ -455,6 +477,16 @@
 // method: UploadFileByNameAsync
 - (CkoTask *)UploadFileByNameAsync: (NSString *)remoteFilePath 
 	localFilePath: (NSString *)localFilePath;
+// method: UploadSb
+- (BOOL)UploadSb: (CkoStringBuilder *)sb 
+	remoteFilePath: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	includeBom: (BOOL)includeBom;
+// method: UploadSbAsync
+- (CkoTask *)UploadSbAsync: (CkoStringBuilder *)sb 
+	remoteFilePath: (NSString *)remoteFilePath 
+	charset: (NSString *)charset 
+	includeBom: (BOOL)includeBom;
 // method: WriteFileBytes
 - (BOOL)WriteFileBytes: (NSString *)sftpHandle 
 	data: (NSData *)data;

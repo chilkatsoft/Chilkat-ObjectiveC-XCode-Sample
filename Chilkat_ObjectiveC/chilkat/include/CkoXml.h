@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Xml
 // Wrapped Chilkat C++ class name =  CkXml
 
+@class CkoStringBuilder;
 
 
 @interface CkoXml : NSObject {
@@ -175,6 +176,8 @@
 - (CkoXml *)GetSelf;
 // method: GetXml
 - (NSString *)GetXml;
+// method: GetXmlSb
+- (BOOL)GetXmlSb: (CkoStringBuilder *)sb;
 // method: HasAttribute
 - (BOOL)HasAttribute: (NSString *)name;
 // method: HasAttrWithValue
@@ -197,6 +200,9 @@
 - (CkoXml *)LastChild;
 // method: LastChild2
 - (BOOL)LastChild2;
+// method: LoadSb
+- (BOOL)LoadSb: (CkoStringBuilder *)sb 
+	autoTrim: (BOOL)autoTrim;
 // method: LoadXml
 - (BOOL)LoadXml: (NSString *)xmlData;
 // method: LoadXml2

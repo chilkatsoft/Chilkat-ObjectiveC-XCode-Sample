@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Global
 // Wrapped Chilkat C++ class name =  CkGlobal
@@ -34,6 +34,7 @@
 @property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, copy) NSNumber *MaxThreads;
 @property (nonatomic, copy) NSString *ThreadPoolLogPath;
+@property (nonatomic, readonly, copy) NSNumber *UnlockStatus;
 @property (nonatomic) BOOL VerboseLogging;
 @property (nonatomic, readonly, copy) NSString *Version;
 // method: DnsClearCache

@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Mime
 // Wrapped Chilkat C++ class name =  CkMime
@@ -7,6 +7,8 @@
 @class CkoCert;
 @class CkoPrivateKey;
 @class CkoStringArray;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoCertChain;
 @class CkoXmlCertVault;
 
@@ -148,8 +150,12 @@
 - (NSString *)GetHeaderFieldValue: (NSNumber *)index;
 // method: GetMime
 - (NSString *)GetMime;
+// method: GetMimeBd
+- (BOOL)GetMimeBd: (CkoBinData *)bindat;
 // method: GetMimeBytes
 - (NSData *)GetMimeBytes;
+// method: GetMimeSb
+- (BOOL)GetMimeSb: (CkoStringBuilder *)sb;
 // method: GetPart
 - (CkoMime *)GetPart: (NSNumber *)index;
 // method: GetSignatureSigningTime
@@ -200,10 +206,14 @@
 - (BOOL)IsXml;
 // method: LoadMime
 - (BOOL)LoadMime: (NSString *)mimeText;
+// method: LoadMimeBd
+- (BOOL)LoadMimeBd: (CkoBinData *)bindat;
 // method: LoadMimeBytes
 - (BOOL)LoadMimeBytes: (NSData *)bData;
 // method: LoadMimeFile
 - (BOOL)LoadMimeFile: (NSString *)path;
+// method: LoadMimeSb
+- (BOOL)LoadMimeSb: (CkoStringBuilder *)sb;
 // method: LoadXml
 - (BOOL)LoadXml: (NSString *)xmlText;
 // method: LoadXmlFile
@@ -218,7 +228,7 @@
 - (BOOL)NewMultipartRelated;
 // method: RemoveHeaderField
 - (void)RemoveHeaderField: (NSString *)name 
-	bAllOccurances: (BOOL)bAllOccurances;
+	bAllOccurrences: (BOOL)bAllOccurrences;
 // method: RemovePart
 - (BOOL)RemovePart: (NSNumber *)index;
 // method: SaveBody

@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Hashtable
 // Wrapped Chilkat C++ class name =  CkHashtable
 
+@class CkoStringTable;
 
 
 @interface CkoHashtable : NSObject {
@@ -25,6 +26,8 @@
 // method: AddInt
 - (BOOL)AddInt: (NSString *)key 
 	value: (NSNumber *)value;
+// method: AddQueryParams
+- (BOOL)AddQueryParams: (NSString *)queryParams;
 // method: AddStr
 - (BOOL)AddStr: (NSString *)key 
 	value: (NSString *)value;
@@ -34,6 +37,8 @@
 - (BOOL)ClearWithNewCapacity: (NSNumber *)capacity;
 // method: Contains
 - (BOOL)Contains: (NSString *)key;
+// method: GetKeys
+- (BOOL)GetKeys: (CkoStringTable *)strTable;
 // method: LookupInt
 - (NSNumber *)LookupInt: (NSString *)key;
 // method: LookupStr

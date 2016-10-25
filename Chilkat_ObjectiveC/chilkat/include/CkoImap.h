@@ -1,12 +1,14 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.62
 
 // Generic/internal class name =  Imap
 // Wrapped Chilkat C++ class name =  CkImap
 
 @class CkoEmail;
 @class CkoTask;
+@class CkoStringBuilder;
 @class CkoMessageSet;
+@class CkoBinData;
 @class CkoEmailBundle;
 @class CkoStringArray;
 @class CkoCert;
@@ -145,6 +147,20 @@
 	flagged: (BOOL)flagged 
 	answered: (BOOL)answered 
 	draft: (BOOL)draft;
+// method: AppendMimeWithFlagsSb
+- (BOOL)AppendMimeWithFlagsSb: (NSString *)mailbox 
+	sbMime: (CkoStringBuilder *)sbMime 
+	seen: (BOOL)seen 
+	flagged: (BOOL)flagged 
+	answered: (BOOL)answered 
+	draft: (BOOL)draft;
+// method: AppendMimeWithFlagsSbAsync
+- (CkoTask *)AppendMimeWithFlagsSbAsync: (NSString *)mailbox 
+	sbMime: (CkoStringBuilder *)sbMime 
+	seen: (BOOL)seen 
+	flagged: (BOOL)flagged 
+	answered: (BOOL)answered 
+	draft: (BOOL)draft;
 // method: Capability
 - (NSString *)Capability;
 // method: CapabilityAsync
@@ -219,12 +235,30 @@
 - (CkoTask *)FetchAttachmentAsync: (CkoEmail *)email 
 	attachIndex: (NSNumber *)attachIndex 
 	saveToPath: (NSString *)saveToPath;
+// method: FetchAttachmentBd
+- (BOOL)FetchAttachmentBd: (CkoEmail *)email 
+	attachmentIndex: (NSNumber *)attachmentIndex 
+	binData: (CkoBinData *)binData;
+// method: FetchAttachmentBdAsync
+- (CkoTask *)FetchAttachmentBdAsync: (CkoEmail *)email 
+	attachmentIndex: (NSNumber *)attachmentIndex 
+	binData: (CkoBinData *)binData;
 // method: FetchAttachmentBytes
 - (NSData *)FetchAttachmentBytes: (CkoEmail *)email 
 	attachIndex: (NSNumber *)attachIndex;
 // method: FetchAttachmentBytesAsync
 - (CkoTask *)FetchAttachmentBytesAsync: (CkoEmail *)email 
 	attachIndex: (NSNumber *)attachIndex;
+// method: FetchAttachmentSb
+- (BOOL)FetchAttachmentSb: (CkoEmail *)email 
+	attachmentIndex: (NSNumber *)attachmentIndex 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
+// method: FetchAttachmentSbAsync
+- (CkoTask *)FetchAttachmentSbAsync: (CkoEmail *)email 
+	attachmentIndex: (NSNumber *)attachmentIndex 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
 // method: FetchAttachmentString
 - (NSString *)FetchAttachmentString: (CkoEmail *)email 
 	attachIndex: (NSNumber *)attachIndex 
@@ -291,6 +325,14 @@
 // method: FetchSingleAsMimeAsync
 - (CkoTask *)FetchSingleAsMimeAsync: (NSNumber *)msgId 
 	bUid: (BOOL)bUid;
+// method: FetchSingleAsMimeSb
+- (BOOL)FetchSingleAsMimeSb: (NSNumber *)msgId 
+	bUid: (BOOL)bUid 
+	sbMime: (CkoStringBuilder *)sbMime;
+// method: FetchSingleAsMimeSbAsync
+- (CkoTask *)FetchSingleAsMimeSbAsync: (NSNumber *)msgId 
+	bUid: (BOOL)bUid 
+	sbMime: (CkoStringBuilder *)sbMime;
 // method: FetchSingleHeader
 - (CkoEmail *)FetchSingleHeader: (NSNumber *)msgId 
 	bUid: (BOOL)bUid;
