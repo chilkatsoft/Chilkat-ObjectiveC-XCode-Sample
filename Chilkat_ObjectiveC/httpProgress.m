@@ -12,6 +12,9 @@
 
 @implementation httpProgress
 
+// IMPORTANT: Callbacks from an async method call, such as DownloadAsync
+// occur in a background thread.   
+
 - (void)PercentDone: (NSNumber *)pctDone abort: (BOOL *)abort
 {
     int percentDone = [pctDone intValue];
