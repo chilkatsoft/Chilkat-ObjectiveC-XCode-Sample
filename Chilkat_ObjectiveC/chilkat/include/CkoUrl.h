@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Url
 // Wrapped Chilkat C++ class name =  CkUrl
@@ -25,6 +25,7 @@
 @property (nonatomic, readonly, copy) NSString *Frag;
 @property (nonatomic, readonly, copy) NSString *Host;
 @property (nonatomic, readonly, copy) NSString *HostType;
+@property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSString *Login;
 @property (nonatomic, readonly, copy) NSString *Password;
 @property (nonatomic, readonly, copy) NSString *Path;

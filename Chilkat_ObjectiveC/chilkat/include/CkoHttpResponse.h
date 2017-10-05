@@ -1,9 +1,11 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  HttpResponse
 // Wrapped Chilkat C++ class name =  CkHttpResponse
 
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoTask;
 
 
@@ -46,6 +48,10 @@
 @property (nonatomic, readonly, copy) NSString *StatusText;
 @property (nonatomic) BOOL VerboseLogging;
 @property (nonatomic, readonly, copy) NSString *Version;
+// method: GetBodyBd
+- (BOOL)GetBodyBd: (CkoBinData *)binData;
+// method: GetBodySb
+- (BOOL)GetBodySb: (CkoStringBuilder *)sb;
 // method: GetCookieDomain
 - (NSString *)GetCookieDomain: (NSNumber *)index;
 // method: GetCookieExpires

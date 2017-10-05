@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  DtObj
 // Wrapped Chilkat C++ class name =  CkDtObj

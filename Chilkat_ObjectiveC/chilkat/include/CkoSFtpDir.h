@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  SFtpDir
 // Wrapped Chilkat C++ class name =  CkSFtpDir
@@ -24,6 +24,7 @@
 
 - (void)clearCppImplObj;
 
+@property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSNumber *NumFilesAndDirs;
 @property (nonatomic, readonly, copy) NSString *OriginalPath;
 // method: GetFilename

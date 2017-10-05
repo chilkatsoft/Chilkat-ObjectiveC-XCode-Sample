@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  ZipCrc
 // Wrapped Chilkat C++ class name =  CkZipCrc
@@ -29,6 +29,7 @@
 // property setter: EventCallbackObject
 - (void)setEventCallbackObject: (CkoBaseProgress *)eventObj;
 
+@property (nonatomic) BOOL LastMethodSuccess;
 // method: BeginStream
 - (void)BeginStream;
 // method: CalculateCrc

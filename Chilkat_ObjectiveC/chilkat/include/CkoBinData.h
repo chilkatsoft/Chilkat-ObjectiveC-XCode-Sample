@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  BinData
 // Wrapped Chilkat C++ class name =  CkBinData
@@ -23,6 +23,7 @@
 
 - (void)clearCppImplObj;
 
+@property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSNumber *NumBytes;
 // method: AppendBd
 - (BOOL)AppendBd: (CkoBinData *)binData;
@@ -60,6 +61,8 @@
 // method: GetEncodedSb
 - (BOOL)GetEncodedSb: (NSString *)encoding 
 	sb: (CkoStringBuilder *)sb;
+// method: GetString
+- (NSString *)GetString: (NSString *)charset;
 // method: LoadBinary
 - (BOOL)LoadBinary: (NSData *)data;
 // method: LoadEncoded
@@ -70,6 +73,8 @@
 // method: RemoveChunk
 - (BOOL)RemoveChunk: (NSNumber *)offset 
 	numBytes: (NSNumber *)numBytes;
+// method: SecureClear
+- (BOOL)SecureClear;
 // method: WriteFile
 - (BOOL)WriteFile: (NSString *)path;
 

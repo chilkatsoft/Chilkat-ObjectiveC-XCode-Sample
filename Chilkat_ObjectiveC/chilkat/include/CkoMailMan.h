@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  MailMan
 // Wrapped Chilkat C++ class name =  CkMailMan
@@ -9,6 +9,7 @@
 @class CkoEmail;
 @class CkoStringArray;
 @class CkoCert;
+@class CkoJsonObject;
 @class CkoBinData;
 @class CkoStringBuilder;
 @class CkoPrivateKey;
@@ -71,7 +72,6 @@
 @property (nonatomic, readonly, copy) NSString *LastErrorText;
 @property (nonatomic, readonly, copy) NSString *LastErrorXml;
 @property (nonatomic) BOOL LastMethodSuccess;
-@property (nonatomic, readonly, copy) NSString *LastSendQFilename;
 @property (nonatomic, readonly, copy) NSNumber *LastSmtpStatus;
 @property (nonatomic, copy) NSString *LogMailReceivedFilename;
 @property (nonatomic, copy) NSString *LogMailSentFilename;
@@ -121,6 +121,7 @@
 @property (nonatomic, copy) NSString *SslAllowedCiphers;
 @property (nonatomic, copy) NSString *SslProtocol;
 @property (nonatomic) BOOL StartTLS;
+@property (nonatomic) BOOL StartTLSifPossible;
 @property (nonatomic, readonly, copy) NSString *TlsCipherSuite;
 @property (nonatomic, copy) NSString *TlsPinSet;
 @property (nonatomic, readonly, copy) NSString *TlsVersion;
@@ -263,6 +264,8 @@
 - (CkoTask *)IsSmtpDsnCapableAsync;
 // method: IsUnlocked
 - (BOOL)IsUnlocked;
+// method: LastJsonData
+- (CkoJsonObject *)LastJsonData;
 // method: LoadEml
 - (CkoEmail *)LoadEml: (NSString *)emlPath;
 // method: LoadMbx

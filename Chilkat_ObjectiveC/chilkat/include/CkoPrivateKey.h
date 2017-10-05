@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  PrivateKey
 // Wrapped Chilkat C++ class name =  CkPrivateKey
@@ -33,6 +33,10 @@
 @property (nonatomic, copy) NSString *Pkcs8EncryptAlg;
 @property (nonatomic) BOOL VerboseLogging;
 @property (nonatomic, readonly, copy) NSString *Version;
+// method: GetJwk
+- (NSString *)GetJwk;
+// method: GetJwkThumbprint
+- (NSString *)GetJwkThumbprint: (NSString *)hashAlg;
 // method: GetPkcs1
 - (NSData *)GetPkcs1;
 // method: GetPkcs1ENC
@@ -66,6 +70,8 @@
 // method: LoadEncryptedPemFile
 - (BOOL)LoadEncryptedPemFile: (NSString *)path 
 	password: (NSString *)password;
+// method: LoadJwk
+- (BOOL)LoadJwk: (NSString *)jsonStr;
 // method: LoadPem
 - (BOOL)LoadPem: (NSString *)str;
 // method: LoadPemFile

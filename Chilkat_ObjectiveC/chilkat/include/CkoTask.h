@@ -1,17 +1,14 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Task
 // Wrapped Chilkat C++ class name =  CkTask
 
 
 
-@class CkoBaseProgress;
-
 @interface CkoTask : NSObject {
 
 	@private
-		void *m_eventCallback;
 		void *m_obj;
 
 }
@@ -24,9 +21,6 @@
 - (void)setCppImplObj: (void *)pObj;
 
 - (void)clearCppImplObj;
-
-// property setter: EventCallbackObject
-- (void)setEventCallbackObject: (CkoBaseProgress *)eventObj;
 
 @property (nonatomic, copy) NSString *DebugLogFilePath;
 @property (nonatomic, readonly) BOOL Finished;

@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Ftp2
 // Wrapped Chilkat C++ class name =  CkFtp2
@@ -8,6 +8,7 @@
 @class CkoDateTime;
 @class CkoBinData;
 @class CkoStringBuilder;
+@class CkoStream;
 @class CkoCert;
 
 
@@ -84,6 +85,7 @@
 @property (nonatomic, copy) NSNumber *IdleTimeoutMs;
 @property (nonatomic, readonly) BOOL IsConnected;
 @property (nonatomic) BOOL KeepSessionLog;
+@property (nonatomic) BOOL LargeFileMeasures;
 @property (nonatomic, readonly, copy) NSString *LastErrorHtml;
 @property (nonatomic, readonly, copy) NSString *LastErrorText;
 @property (nonatomic, readonly, copy) NSString *LastErrorXml;
@@ -291,6 +293,12 @@
 - (CkoTask *)GetFileSbAsync: (NSString *)remoteFilePath 
 	charset: (NSString *)charset 
 	sb: (CkoStringBuilder *)sb;
+// method: GetFileToStream
+- (BOOL)GetFileToStream: (NSString *)remoteFilePath 
+	toStream: (CkoStream *)toStream;
+// method: GetFileToStreamAsync
+- (CkoTask *)GetFileToStreamAsync: (NSString *)remoteFilePath 
+	toStream: (CkoStream *)toStream;
 // method: GetGroup
 - (NSString *)GetGroup: (NSNumber *)index;
 // method: GetGroupAsync

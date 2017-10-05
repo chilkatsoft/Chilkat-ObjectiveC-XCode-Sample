@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  JavaKeyStore
 // Wrapped Chilkat C++ class name =  CkJavaKeyStore
@@ -8,6 +8,8 @@
 @class CkoCert;
 @class CkoCertChain;
 @class CkoPrivateKey;
+@class CkoJsonObject;
+@class CkoStringBuilder;
 @class CkoPem;
 @class CkoXmlCertVault;
 
@@ -34,6 +36,7 @@
 @property (nonatomic, readonly, copy) NSString *LastErrorXml;
 @property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSNumber *NumPrivateKeys;
+@property (nonatomic, readonly, copy) NSNumber *NumSecretKeys;
 @property (nonatomic, readonly, copy) NSNumber *NumTrustedCerts;
 @property (nonatomic) BOOL RequireCompleteChain;
 @property (nonatomic) BOOL VerboseLogging;
@@ -45,6 +48,12 @@
 	password: (NSString *)password;
 // method: AddPrivateKey
 - (BOOL)AddPrivateKey: (CkoCert *)cert 
+	alias: (NSString *)alias 
+	password: (NSString *)password;
+// method: AddSecretKey
+- (BOOL)AddSecretKey: (NSString *)encodedKeyBytes 
+	encoding: (NSString *)encoding 
+	algorithm: (NSString *)algorithm 
 	alias: (NSString *)alias 
 	password: (NSString *)password;
 // method: AddTrustedCert
@@ -71,6 +80,12 @@
 	index: (NSNumber *)index;
 // method: GetPrivateKeyAlias
 - (NSString *)GetPrivateKeyAlias: (NSNumber *)index;
+// method: GetSecretKey
+- (NSString *)GetSecretKey: (NSString *)password 
+	index: (NSNumber *)index 
+	encoding: (NSString *)encoding;
+// method: GetSecretKeyAlias
+- (NSString *)GetSecretKeyAlias: (NSNumber *)index;
 // method: GetTrustedCert
 - (CkoCert *)GetTrustedCert: (NSNumber *)index;
 // method: GetTrustedCertAlias
@@ -85,6 +100,9 @@
 // method: LoadFile
 - (BOOL)LoadFile: (NSString *)password 
 	path: (NSString *)path;
+// method: LoadJwkSet
+- (BOOL)LoadJwkSet: (NSString *)password 
+	jwkSet: (CkoJsonObject *)jwkSet;
 // method: RemoveEntry
 - (BOOL)RemoveEntry: (NSNumber *)entryType 
 	index: (NSNumber *)index;
@@ -102,6 +120,9 @@
 // method: ToFile
 - (BOOL)ToFile: (NSString *)password 
 	path: (NSString *)path;
+// method: ToJwkSet
+- (BOOL)ToJwkSet: (NSString *)password 
+	sbJwkSet: (CkoStringBuilder *)sbJwkSet;
 // method: ToPem
 - (CkoPem *)ToPem: (NSString *)password;
 // method: ToPfx

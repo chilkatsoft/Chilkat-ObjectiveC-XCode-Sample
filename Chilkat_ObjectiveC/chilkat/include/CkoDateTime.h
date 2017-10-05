@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  CkDateTime
 // Wrapped Chilkat C++ class name =  CkDateTime
@@ -35,14 +35,24 @@
 @property (nonatomic, readonly, copy) NSString *Version;
 // method: AddDays
 - (BOOL)AddDays: (NSNumber *)numDays;
+// method: AddSeconds
+- (BOOL)AddSeconds: (NSNumber *)numSeconds;
 // method: DeSerialize
 - (void)DeSerialize: (NSString *)serializedDateTime;
+// method: DiffSeconds
+- (NSNumber *)DiffSeconds: (CkoDateTime *)dateTimeArg;
+// method: ExpiresWithin
+- (BOOL)ExpiresWithin: (NSNumber *)n 
+	units: (NSString *)units;
 // method: GetAsDateTime
 - (NSDate *)GetAsDateTime: (BOOL)bLocal;
 // method: GetAsDateTimeTicks
 - (NSNumber *)GetAsDateTimeTicks: (BOOL)bLocal;
 // method: GetAsDosDate
 - (NSNumber *)GetAsDosDate: (BOOL)bLocal;
+// method: GetAsIso8601
+- (NSString *)GetAsIso8601: (NSString *)formatStr 
+	bLocal: (BOOL)bLocal;
 // method: GetAsOleDate
 - (NSNumber *)GetAsOleDate: (BOOL)bLocal;
 // method: GetAsRfc822
@@ -55,10 +65,15 @@
 - (NSNumber *)GetAsUnixTime64: (BOOL)bLocal;
 // method: GetAsUnixTimeDbl
 - (NSNumber *)GetAsUnixTimeDbl: (BOOL)bLocal;
+// method: GetAsUnixTimeStr
+- (NSString *)GetAsUnixTimeStr: (BOOL)bLocal;
 // method: GetDtObj
 - (CkoDtObj *)GetDtObj: (BOOL)bLocal;
 // method: LoadTaskResult
 - (BOOL)LoadTaskResult: (CkoTask *)task;
+// method: OlderThan
+- (BOOL)OlderThan: (NSNumber *)n 
+	units: (NSString *)units;
 // method: SaveLastError
 - (BOOL)SaveLastError: (NSString *)path;
 // method: Serialize

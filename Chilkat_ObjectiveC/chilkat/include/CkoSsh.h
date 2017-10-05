@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Ssh
 // Wrapped Chilkat C++ class name =  CkSsh
@@ -75,6 +75,7 @@
 @property (nonatomic, copy) NSNumber *SoRcvBuf;
 @property (nonatomic, copy) NSNumber *SoSndBuf;
 @property (nonatomic) BOOL StderrToStdout;
+@property (nonatomic) BOOL StripColorCodes;
 @property (nonatomic) BOOL TcpNoDelay;
 @property (nonatomic, copy) NSString *UserAuthBanner;
 @property (nonatomic) BOOL VerboseLogging;
@@ -245,6 +246,24 @@
 // method: PeekReceivedText
 - (NSString *)PeekReceivedText: (NSNumber *)channelNum 
 	charset: (NSString *)charset;
+// method: QuickCmdCheck
+- (NSNumber *)QuickCmdCheck: (NSNumber *)pollTimeoutMs;
+// method: QuickCmdCheckAsync
+- (CkoTask *)QuickCmdCheckAsync: (NSNumber *)pollTimeoutMs;
+// method: QuickCmdSend
+- (NSNumber *)QuickCmdSend: (NSString *)command;
+// method: QuickCmdSendAsync
+- (CkoTask *)QuickCmdSendAsync: (NSString *)command;
+// method: QuickCommand
+- (NSString *)QuickCommand: (NSString *)command 
+	charset: (NSString *)charset;
+// method: QuickCommandAsync
+- (CkoTask *)QuickCommandAsync: (NSString *)command 
+	charset: (NSString *)charset;
+// method: QuickShell
+- (NSNumber *)QuickShell;
+// method: QuickShellAsync
+- (CkoTask *)QuickShellAsync;
 // method: ReKey
 - (BOOL)ReKey;
 // method: ReKeyAsync

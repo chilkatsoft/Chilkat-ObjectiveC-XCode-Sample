@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.61
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  SshTunnel
 // Wrapped Chilkat C++ class name =  CkSshTunnel
@@ -114,6 +114,8 @@
 	port: (NSNumber *)port;
 // method: DisconnectAllClients
 - (BOOL)DisconnectAllClients: (BOOL)waitForThreads;
+// method: GetCurrentState
+- (NSString *)GetCurrentState;
 // method: IsSshConnected
 - (BOOL)IsSshConnected;
 // method: SaveLastError

@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  JsonArray
 // Wrapped Chilkat C++ class name =  CkJsonArray
 
+@class CkoStringBuilder;
 @class CkoJsonObject;
 
 
@@ -24,6 +25,8 @@
 - (void)clearCppImplObj;
 
 @property (nonatomic, copy) NSString *DebugLogFilePath;
+@property (nonatomic) BOOL EmitCompact;
+@property (nonatomic) BOOL EmitCrlf;
 @property (nonatomic, readonly, copy) NSString *LastErrorHtml;
 @property (nonatomic, readonly, copy) NSString *LastErrorText;
 @property (nonatomic, readonly, copy) NSString *LastErrorXml;
@@ -57,10 +60,16 @@
 - (BOOL)DeleteAt: (NSNumber *)index;
 // method: Emit
 - (NSString *)Emit;
+// method: EmitSb
+- (BOOL)EmitSb: (CkoStringBuilder *)sb;
 // method: IntAt
 - (NSNumber *)IntAt: (NSNumber *)index;
 // method: IsNullAt
 - (BOOL)IsNullAt: (NSNumber *)index;
+// method: Load
+- (BOOL)Load: (NSString *)jsonArray;
+// method: LoadSb
+- (BOOL)LoadSb: (CkoStringBuilder *)sb;
 // method: ObjectAt
 - (CkoJsonObject *)ObjectAt: (NSNumber *)index;
 // method: SaveLastError

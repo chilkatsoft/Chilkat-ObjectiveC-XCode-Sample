@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  OAuth1
 // Wrapped Chilkat C++ class name =  CkOAuth1
 
+@class CkoPrivateKey;
 
 
 @interface CkoOAuth1 : NSObject {
@@ -59,5 +60,7 @@
 - (BOOL)RemoveParam: (NSString *)name;
 // method: SaveLastError
 - (BOOL)SaveLastError: (NSString *)path;
+// method: SetRsaKey
+- (BOOL)SetRsaKey: (CkoPrivateKey *)privKey;
 
 @end

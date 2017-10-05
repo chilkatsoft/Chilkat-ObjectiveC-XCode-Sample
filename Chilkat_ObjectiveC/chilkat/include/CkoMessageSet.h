@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  MessageSet
 // Wrapped Chilkat C++ class name =  CkMessageSet
@@ -25,6 +25,7 @@
 
 @property (nonatomic, readonly, copy) NSNumber *Count;
 @property (nonatomic) BOOL HasUids;
+@property (nonatomic) BOOL LastMethodSuccess;
 // method: ContainsId
 - (BOOL)ContainsId: (NSNumber *)id;
 // method: FromCompactString

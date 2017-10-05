@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Zip
 // Wrapped Chilkat C++ class name =  CkZip
@@ -7,6 +7,7 @@
 @class CkoZipEntry;
 @class CkoTask;
 @class CkoStringArray;
+@class CkoBinData;
 
 
 @class CkoZipProgress;
@@ -172,6 +173,8 @@
 - (BOOL)IsUnlocked;
 // method: NewZip
 - (BOOL)NewZip: (NSString *)zipPath;
+// method: OpenBd
+- (BOOL)OpenBd: (CkoBinData *)binData;
 // method: OpenFromByteData
 - (BOOL)OpenFromByteData: (NSData *)byteData;
 // method: OpenFromMemory
@@ -226,6 +229,10 @@
 - (CkoTask *)UnzipNewerAsync: (NSString *)dirPath;
 // method: VerifyPassword
 - (BOOL)VerifyPassword;
+// method: WriteBd
+- (BOOL)WriteBd: (CkoBinData *)binData;
+// method: WriteBdAsync
+- (CkoTask *)WriteBdAsync: (CkoBinData *)binData;
 // method: WriteToMemory
 - (NSData *)WriteToMemory;
 // method: WriteToMemoryAsync

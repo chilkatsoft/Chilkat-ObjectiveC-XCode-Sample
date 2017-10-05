@@ -1,11 +1,13 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Socket
 // Wrapped Chilkat C++ class name =  CkSocket
 
 @class CkoTask;
 @class CkoCert;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoSshKey;
 @class CkoSsh;
 
@@ -173,6 +175,14 @@
 // method: BindAndListenAsync
 - (CkoTask *)BindAndListenAsync: (NSNumber *)port 
 	backlog: (NSNumber *)backlog;
+// method: BindAndListenPortRange
+- (NSNumber *)BindAndListenPortRange: (NSNumber *)beginPort 
+	endPort: (NSNumber *)endPort 
+	backLog: (NSNumber *)backLog;
+// method: BindAndListenPortRangeAsync
+- (CkoTask *)BindAndListenPortRangeAsync: (NSNumber *)beginPort 
+	endPort: (NSNumber *)endPort 
+	backLog: (NSNumber *)backLog;
 // method: BuildHttpGetRequest
 - (NSString *)BuildHttpGetRequest: (NSString *)url;
 // method: CheckWriteable
@@ -231,6 +241,16 @@
 - (BOOL)PollDataAvailable;
 // method: PollDataAvailableAsync
 - (CkoTask *)PollDataAvailableAsync;
+// method: ReceiveBd
+- (BOOL)ReceiveBd: (CkoBinData *)binData;
+// method: ReceiveBdAsync
+- (CkoTask *)ReceiveBdAsync: (CkoBinData *)binData;
+// method: ReceiveBdN
+- (BOOL)ReceiveBdN: (NSNumber *)numBytes 
+	binData: (CkoBinData *)binData;
+// method: ReceiveBdNAsync
+- (CkoTask *)ReceiveBdNAsync: (NSNumber *)numBytes 
+	binData: (CkoBinData *)binData;
 // method: ReceiveByte
 - (BOOL)ReceiveByte: (BOOL)bUnsigned;
 // method: ReceiveByteAsync
@@ -271,6 +291,10 @@
 // method: ReceiveNBytesENCAsync
 - (CkoTask *)ReceiveNBytesENCAsync: (NSNumber *)numBytes 
 	encodingAlg: (NSString *)encodingAlg;
+// method: ReceiveSb
+- (BOOL)ReceiveSb: (CkoStringBuilder *)sb;
+// method: ReceiveSbAsync
+- (CkoTask *)ReceiveSbAsync: (CkoStringBuilder *)sb;
 // method: ReceiveString
 - (NSString *)ReceiveString;
 // method: ReceiveStringAsync
@@ -305,6 +329,14 @@
 - (NSNumber *)SelectForWriting: (NSNumber *)timeoutMs;
 // method: SelectForWritingAsync
 - (CkoTask *)SelectForWritingAsync: (NSNumber *)timeoutMs;
+// method: SendBd
+- (BOOL)SendBd: (CkoBinData *)binData 
+	offset: (NSNumber *)offset 
+	numBytes: (NSNumber *)numBytes;
+// method: SendBdAsync
+- (CkoTask *)SendBdAsync: (CkoBinData *)binData 
+	offset: (NSNumber *)offset 
+	numBytes: (NSNumber *)numBytes;
 // method: SendByte
 - (BOOL)SendByte: (NSNumber *)value;
 // method: SendByteAsync
@@ -335,10 +367,18 @@
 // method: SendInt32Async
 - (CkoTask *)SendInt32Async: (NSNumber *)value 
 	bigEndian: (BOOL)bigEndian;
+// method: SendSb
+- (BOOL)SendSb: (CkoStringBuilder *)sb;
+// method: SendSbAsync
+- (CkoTask *)SendSbAsync: (CkoStringBuilder *)sb;
 // method: SendString
 - (BOOL)SendString: (NSString *)str;
 // method: SendStringAsync
 - (CkoTask *)SendStringAsync: (NSString *)str;
+// method: SendWakeOnLan
+- (BOOL)SendWakeOnLan: (NSString *)macAddress 
+	port: (NSNumber *)port 
+	ipBroadcastAddr: (NSString *)ipBroadcastAddr;
 // method: SetSslClientCert
 - (BOOL)SetSslClientCert: (CkoCert *)cert;
 // method: SetSslClientCertPem

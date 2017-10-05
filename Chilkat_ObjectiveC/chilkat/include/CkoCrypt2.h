@@ -1,11 +1,13 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Crypt2
 // Wrapped Chilkat C++ class name =  CkCrypt2
 
 @class CkoCert;
 @class CkoTask;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoStream;
 @class CkoCertChain;
 @class CkoPrivateKey;
@@ -35,6 +37,7 @@
 - (void)setEventCallbackObject: (CkoBaseProgress *)eventObj;
 
 @property (nonatomic) BOOL AbortCurrent;
+@property (nonatomic, copy) NSNumber *BCryptWorkFactor;
 @property (nonatomic, readonly, copy) NSNumber *BlockSize;
 @property (nonatomic) BOOL CadesEnabled;
 @property (nonatomic, copy) NSString *CadesSigPolicyHash;
@@ -62,6 +65,8 @@
 @property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, copy) NSString *MacAlgorithm;
 @property (nonatomic, readonly, copy) NSNumber *NumSignerCerts;
+@property (nonatomic, copy) NSString *OaepHash;
+@property (nonatomic) BOOL OaepPadding;
 @property (nonatomic, copy) NSNumber *PaddingScheme;
 @property (nonatomic, copy) NSString *PbesAlgorithm;
 @property (nonatomic, copy) NSString *PbesPassword;
@@ -69,6 +74,7 @@
 @property (nonatomic, copy) NSNumber *Rc2EffectiveKeyLength;
 @property (nonatomic, copy) NSData *Salt;
 @property (nonatomic, copy) NSData *SecretKey;
+@property (nonatomic, copy) NSString *SigningAlg;
 @property (nonatomic, copy) NSString *UuFilename;
 @property (nonatomic, copy) NSString *UuMode;
 @property (nonatomic) BOOL VerboseLogging;
@@ -81,6 +87,19 @@
 // method: AddPfxSourceFile
 - (BOOL)AddPfxSourceFile: (NSString *)pfxFilePath 
 	password: (NSString *)password;
+// method: AesKeyUnwrap
+- (NSString *)AesKeyUnwrap: (NSString *)kek 
+	wrappedKeyData: (NSString *)wrappedKeyData 
+	encoding: (NSString *)encoding;
+// method: AesKeyWrap
+- (NSString *)AesKeyWrap: (NSString *)kek 
+	keyData: (NSString *)keyData 
+	encoding: (NSString *)encoding;
+// method: BCryptHash
+- (NSString *)BCryptHash: (NSString *)password;
+// method: BCryptVerify
+- (BOOL)BCryptVerify: (NSString *)password 
+	bcryptHash: (NSString *)bcryptHash;
 // method: BytesToString
 - (NSString *)BytesToString: (NSData *)inData 
 	charset: (NSString *)charset;
@@ -133,12 +152,17 @@
 - (NSString *)DecodeString: (NSString *)inStr 
 	charset: (NSString *)charset 
 	encoding: (NSString *)encoding;
+// method: DecryptBd
+- (BOOL)DecryptBd: (CkoBinData *)bd;
 // method: DecryptBytes
 - (NSData *)DecryptBytes: (NSData *)bData;
 // method: DecryptBytesENC
 - (NSData *)DecryptBytesENC: (NSString *)str;
 // method: DecryptEncoded
 - (NSString *)DecryptEncoded: (NSString *)str;
+// method: DecryptSb
+- (BOOL)DecryptSb: (CkoBinData *)bdIn 
+	sbOut: (CkoStringBuilder *)sbOut;
 // method: DecryptStream
 - (BOOL)DecryptStream: (CkoStream *)strm;
 // method: DecryptStreamAsync
@@ -158,12 +182,17 @@
 - (NSString *)EncodeString: (NSString *)inStr 
 	charset: (NSString *)charset 
 	encoding: (NSString *)encoding;
+// method: EncryptBd
+- (BOOL)EncryptBd: (CkoBinData *)bd;
 // method: EncryptBytes
 - (NSData *)EncryptBytes: (NSData *)bData;
 // method: EncryptBytesENC
 - (NSString *)EncryptBytesENC: (NSData *)bData;
 // method: EncryptEncoded
 - (NSString *)EncryptEncoded: (NSString *)str;
+// method: EncryptSb
+- (BOOL)EncryptSb: (CkoStringBuilder *)sbIn 
+	bdOut: (CkoBinData *)bdOut;
 // method: EncryptStream
 - (BOOL)EncryptStream: (CkoStream *)strm;
 // method: EncryptStreamAsync
@@ -203,6 +232,8 @@
 - (CkoCert *)GetSignerCert: (NSNumber *)index;
 // method: GetSignerCertChain
 - (CkoCertChain *)GetSignerCertChain: (NSNumber *)index;
+// method: HashBdENC
+- (NSString *)HashBdENC: (CkoBinData *)bd;
 // method: HashBeginBytes
 - (BOOL)HashBeginBytes: (NSData *)data;
 // method: HashBeginString
@@ -251,6 +282,8 @@
 - (NSString *)InflateStringENC: (NSString *)str;
 // method: IsUnlocked
 - (BOOL)IsUnlocked;
+// method: MacBdENC
+- (NSString *)MacBdENC: (CkoBinData *)bd;
 // method: MacBytes
 - (NSData *)MacBytes: (NSData *)inBytes;
 // method: MacBytesENC
@@ -265,6 +298,8 @@
 // method: MySqlAesEncrypt
 - (NSString *)MySqlAesEncrypt: (NSString *)strData 
 	strKey: (NSString *)strKey;
+// method: OpaqueSignBd
+- (BOOL)OpaqueSignBd: (CkoBinData *)bd;
 // method: OpaqueSignBytes
 - (NSData *)OpaqueSignBytes: (NSData *)bData;
 // method: OpaqueSignBytesENC
@@ -273,6 +308,8 @@
 - (NSData *)OpaqueSignString: (NSString *)str;
 // method: OpaqueSignStringENC
 - (NSString *)OpaqueSignStringENC: (NSString *)str;
+// method: OpaqueVerifyBd
+- (BOOL)OpaqueVerifyBd: (CkoBinData *)bd;
 // method: OpaqueVerifyBytes
 - (NSData *)OpaqueVerifyBytes: (NSData *)p7s;
 // method: OpaqueVerifyBytesENC
@@ -357,10 +394,14 @@
 	key: (CkoPrivateKey *)key;
 // method: SetVerifyCert
 - (BOOL)SetVerifyCert: (CkoCert *)cert;
+// method: SignBdENC
+- (NSString *)SignBdENC: (CkoBinData *)dataToSign;
 // method: SignBytes
 - (NSData *)SignBytes: (NSData *)bData;
 // method: SignBytesENC
 - (NSString *)SignBytesENC: (NSData *)bData;
+// method: SignSbENC
+- (NSString *)SignSbENC: (CkoStringBuilder *)sb;
 // method: SignString
 - (NSData *)SignString: (NSString *)str;
 // method: SignStringENC
@@ -375,6 +416,9 @@
 - (BOOL)UnlockComponent: (NSString *)unlockCode;
 // method: UseCertVault
 - (BOOL)UseCertVault: (CkoXmlCertVault *)vault;
+// method: VerifyBdENC
+- (BOOL)VerifyBdENC: (CkoBinData *)data 
+	encodedSig: (NSString *)encodedSig;
 // method: VerifyBytes
 - (BOOL)VerifyBytes: (NSData *)bData1 
 	sigData: (NSData *)sigData;
@@ -390,6 +434,9 @@
 // method: VerifyP7S
 - (BOOL)VerifyP7S: (NSString *)inPath 
 	p7sPath: (NSString *)p7sPath;
+// method: VerifySbENC
+- (BOOL)VerifySbENC: (CkoStringBuilder *)sb 
+	encodedSig: (NSString *)encodedSig;
 // method: VerifyString
 - (BOOL)VerifyString: (NSString *)str 
 	sigData: (NSData *)sigData;

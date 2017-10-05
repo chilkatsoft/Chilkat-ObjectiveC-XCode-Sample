@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  FileAccess
 // Wrapped Chilkat C++ class name =  CkFileAccess
 
+@class CkoBinData;
 @class CkoDateTime;
 
 
@@ -44,13 +45,13 @@
 // method: AppendUtf8BOM
 - (BOOL)AppendUtf8BOM;
 // method: DirAutoCreate
-- (BOOL)DirAutoCreate: (NSString *)path;
+- (BOOL)DirAutoCreate: (NSString *)filePath;
 // method: DirCreate
 - (BOOL)DirCreate: (NSString *)path;
 // method: DirDelete
 - (BOOL)DirDelete: (NSString *)path;
 // method: DirEnsureExists
-- (BOOL)DirEnsureExists: (NSString *)filePath;
+- (BOOL)DirEnsureExists: (NSString *)dirPath;
 // method: FileClose
 - (void)FileClose;
 // method: FileContentsEqual
@@ -74,6 +75,9 @@
 	attr: (NSNumber *)attr;
 // method: FileRead
 - (NSData *)FileRead: (NSNumber *)numBytes;
+// method: FileReadBd
+- (BOOL)FileReadBd: (NSNumber *)maxNumBytes 
+	binData: (CkoBinData *)binData;
 // method: FileRename
 - (BOOL)FileRename: (NSString *)existingPath 
 	newPath: (NSString *)newPath;
@@ -84,10 +88,24 @@
 - (NSNumber *)FileSize: (NSString *)path;
 // method: FileWrite
 - (BOOL)FileWrite: (NSData *)data;
+// method: FileWriteBd
+- (BOOL)FileWriteBd: (CkoBinData *)binData 
+	offset: (NSNumber *)offset 
+	numBytes: (NSNumber *)numBytes;
 // method: GenBlockId
 - (NSString *)GenBlockId: (NSNumber *)index 
 	length: (NSNumber *)length 
 	encoding: (NSString *)encoding;
+// method: GetDirectoryName
+- (NSString *)GetDirectoryName: (NSString *)path;
+// method: GetExtension
+- (NSString *)GetExtension: (NSString *)path;
+// method: GetFileName
+- (NSString *)GetFileName: (NSString *)path;
+// method: GetFileNameWithoutExtension
+- (NSString *)GetFileNameWithoutExtension: (NSString *)path;
+// method: GetLastModified
+- (CkoDateTime *)GetLastModified: (NSString *)path;
 // method: GetNumBlocks
 - (NSNumber *)GetNumBlocks: (NSNumber *)blockSize;
 // method: GetTempFilename

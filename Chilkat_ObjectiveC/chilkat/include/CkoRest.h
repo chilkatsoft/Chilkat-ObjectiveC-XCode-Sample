@@ -1,16 +1,17 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Rest
 // Wrapped Chilkat C++ class name =  CkRest
 
 @class CkoStringBuilder;
 @class CkoTask;
-@class CkoStream;
 @class CkoBinData;
+@class CkoStream;
 @class CkoUrl;
 @class CkoAuthAws;
 @class CkoAuthAzureAD;
+@class CkoAuthAzureSAS;
 @class CkoAuthAzureStorage;
 @class CkoAuthGoogle;
 @class CkoOAuth1;
@@ -40,6 +41,7 @@
 // property setter: EventCallbackObject
 - (void)setEventCallbackObject: (CkoBaseProgress *)eventObj;
 
+@property (nonatomic) BOOL AllowHeaderFolding;
 @property (nonatomic) BOOL AllowHeaderQB;
 @property (nonatomic, copy) NSString *Authorization;
 @property (nonatomic, readonly, copy) NSNumber *ConnectFailReason;
@@ -65,6 +67,11 @@
 // method: AddHeader
 - (BOOL)AddHeader: (NSString *)name 
 	value: (NSString *)value;
+// method: AddMwsSignature
+- (BOOL)AddMwsSignature: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	domain: (NSString *)domain 
+	mwsSecretKey: (NSString *)mwsSecretKey;
 // method: AddQueryParam
 - (BOOL)AddQueryParam: (NSString *)name 
 	value: (NSString *)value;
@@ -75,8 +82,12 @@
 	value: (CkoStringBuilder *)value;
 // method: ClearAllHeaders
 - (BOOL)ClearAllHeaders;
+// method: ClearAllParts
+- (BOOL)ClearAllParts;
 // method: ClearAllQueryParams
 - (BOOL)ClearAllQueryParams;
+// method: ClearAuth
+- (BOOL)ClearAuth;
 // method: ClearResponseBodyStream
 - (void)ClearResponseBodyStream;
 // method: Connect
@@ -93,6 +104,16 @@
 - (BOOL)Disconnect: (NSNumber *)maxWaitMs;
 // method: DisconnectAsync
 - (CkoTask *)DisconnectAsync: (NSNumber *)maxWaitMs;
+// method: FullRequestBd
+- (BOOL)FullRequestBd: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	binData: (CkoBinData *)binData 
+	responseBody: (CkoStringBuilder *)responseBody;
+// method: FullRequestBdAsync
+- (CkoTask *)FullRequestBdAsync: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	binData: (CkoBinData *)binData 
+	responseBody: (CkoStringBuilder *)responseBody;
 // method: FullRequestBinary
 - (NSString *)FullRequestBinary: (NSString *)httpVerb 
 	uriPath: (NSString *)uriPath 
@@ -119,6 +140,22 @@
 // method: FullRequestNoBodyAsync
 - (CkoTask *)FullRequestNoBodyAsync: (NSString *)httpVerb 
 	uriPath: (NSString *)uriPath;
+// method: FullRequestNoBodyBd
+- (BOOL)FullRequestNoBodyBd: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	binData: (CkoBinData *)binData;
+// method: FullRequestNoBodyBdAsync
+- (CkoTask *)FullRequestNoBodyBdAsync: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	binData: (CkoBinData *)binData;
+// method: FullRequestNoBodySb
+- (BOOL)FullRequestNoBodySb: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	sb: (CkoStringBuilder *)sb;
+// method: FullRequestNoBodySbAsync
+- (CkoTask *)FullRequestNoBodySbAsync: (NSString *)httpVerb 
+	uriPath: (NSString *)uriPath 
+	sb: (CkoStringBuilder *)sb;
 // method: FullRequestSb
 - (BOOL)FullRequestSb: (NSString *)httpVerb 
 	uriPath: (NSString *)uriPath 
@@ -247,6 +284,8 @@
 - (BOOL)SetAuthAws: (CkoAuthAws *)authProvider;
 // method: SetAuthAzureAD
 - (BOOL)SetAuthAzureAD: (CkoAuthAzureAD *)authProvider;
+// method: SetAuthAzureSas
+- (BOOL)SetAuthAzureSas: (CkoAuthAzureSAS *)authProvider;
 // method: SetAuthAzureStorage
 - (BOOL)SetAuthAzureStorage: (CkoAuthAzureStorage *)authProvider;
 // method: SetAuthBasic

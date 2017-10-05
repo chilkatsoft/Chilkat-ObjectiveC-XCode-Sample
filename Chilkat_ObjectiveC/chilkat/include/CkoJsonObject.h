@@ -1,11 +1,14 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  JsonObject
 // Wrapped Chilkat C++ class name =  CkJsonObject
 
 @class CkoJsonArray;
+@class CkoStringTable;
+@class CkoBinData;
 @class CkoStringBuilder;
+@class CkoHashtable;
 
 
 @interface CkoJsonObject : NSObject {
@@ -76,6 +79,9 @@
 // method: AppendString
 - (BOOL)AppendString: (NSString *)name 
 	value: (NSString *)value;
+// method: AppendStringArray
+- (BOOL)AppendStringArray: (NSString *)name 
+	values: (CkoStringTable *)values;
 // method: ArrayAt
 - (CkoJsonArray *)ArrayAt: (NSNumber *)index;
 // method: ArrayOf
@@ -84,6 +90,12 @@
 - (BOOL)BoolAt: (NSNumber *)index;
 // method: BoolOf
 - (BOOL)BoolOf: (NSString *)jsonPath;
+// method: BytesOf
+- (BOOL)BytesOf: (NSString *)jsonPath 
+	encoding: (NSString *)encoding 
+	bd: (CkoBinData *)bd;
+// method: Clone
+- (CkoJsonObject *)Clone;
 // method: Delete
 - (BOOL)Delete: (NSString *)name;
 // method: DeleteAt
@@ -92,6 +104,22 @@
 - (NSString *)Emit;
 // method: EmitSb
 - (BOOL)EmitSb: (CkoStringBuilder *)sb;
+// method: EmitWithSubs
+- (NSString *)EmitWithSubs: (CkoHashtable *)subs 
+	omitEmpty: (BOOL)omitEmpty;
+// method: FindObjectWithMember
+- (CkoJsonObject *)FindObjectWithMember: (NSString *)name;
+// method: FindRecord
+- (CkoJsonObject *)FindRecord: (NSString *)arrayPath 
+	relPath: (NSString *)relPath 
+	value: (NSString *)value 
+	caseSensitive: (BOOL)caseSensitive;
+// method: FindRecordString
+- (NSString *)FindRecordString: (NSString *)arrayPath 
+	relPath: (NSString *)relPath 
+	value: (NSString *)value 
+	caseSensitive: (BOOL)caseSensitive 
+	retRelPath: (NSString *)retRelPath;
 // method: FirebaseApplyEvent
 - (BOOL)FirebaseApplyEvent: (NSString *)name 
 	data: (NSString *)data;
@@ -115,10 +143,14 @@
 - (BOOL)IsNullAt: (NSNumber *)index;
 // method: IsNullOf
 - (BOOL)IsNullOf: (NSString *)jsonPath;
+// method: JsonTypeOf
+- (NSNumber *)JsonTypeOf: (NSString *)jsonPath;
 // method: Load
 - (BOOL)Load: (NSString *)json;
 // method: LoadFile
 - (BOOL)LoadFile: (NSString *)path;
+// method: LoadPredefined
+- (BOOL)LoadPredefined: (NSString *)name;
 // method: LoadSb
 - (BOOL)LoadSb: (CkoStringBuilder *)sb;
 // method: NameAt
@@ -127,6 +159,8 @@
 - (CkoJsonObject *)ObjectAt: (NSNumber *)index;
 // method: ObjectOf
 - (CkoJsonObject *)ObjectOf: (NSString *)jsonPath;
+// method: Predefine
+- (BOOL)Predefine: (NSString *)name;
 // method: Rename
 - (BOOL)Rename: (NSString *)oldName 
 	newName: (NSString *)newName;
@@ -169,7 +203,31 @@
 - (NSString *)StringAt: (NSNumber *)index;
 // method: StringOf
 - (NSString *)StringOf: (NSString *)jsonPath;
+// method: StringOfSb
+- (BOOL)StringOfSb: (NSString *)jsonPath 
+	sb: (CkoStringBuilder *)sb;
 // method: TypeAt
 - (NSNumber *)TypeAt: (NSNumber *)index;
+// method: UpdateBd
+- (BOOL)UpdateBd: (NSString *)jsonPath 
+	encoding: (NSString *)encoding 
+	bd: (CkoBinData *)bd;
+// method: UpdateBool
+- (BOOL)UpdateBool: (NSString *)jsonPath 
+	value: (BOOL)value;
+// method: UpdateInt
+- (BOOL)UpdateInt: (NSString *)jsonPath 
+	value: (NSNumber *)value;
+// method: UpdateNull
+- (BOOL)UpdateNull: (NSString *)jsonPath;
+// method: UpdateNumber
+- (BOOL)UpdateNumber: (NSString *)jsonPath 
+	numericStr: (NSString *)numericStr;
+// method: UpdateSb
+- (BOOL)UpdateSb: (NSString *)jsonPath 
+	sb: (CkoStringBuilder *)sb;
+// method: UpdateString
+- (BOOL)UpdateString: (NSString *)jsonPath 
+	value: (NSString *)value;
 
 @end

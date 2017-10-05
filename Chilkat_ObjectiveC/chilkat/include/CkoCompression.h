@@ -1,10 +1,11 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Compression
 // Wrapped Chilkat C++ class name =  CkCompression
 
 @class CkoTask;
+@class CkoBinData;
 @class CkoStream;
 
 
@@ -73,6 +74,10 @@
 - (NSString *)BeginDecompressStringENC: (NSString *)str;
 // method: BeginDecompressStringENCAsync
 - (CkoTask *)BeginDecompressStringENCAsync: (NSString *)str;
+// method: CompressBd
+- (BOOL)CompressBd: (CkoBinData *)binData;
+// method: CompressBdAsync
+- (CkoTask *)CompressBdAsync: (CkoBinData *)binData;
 // method: CompressBytes
 - (NSData *)CompressBytes: (NSData *)bData;
 // method: CompressBytesAsync
@@ -99,6 +104,10 @@
 - (NSString *)CompressStringENC: (NSString *)str;
 // method: CompressStringENCAsync
 - (CkoTask *)CompressStringENCAsync: (NSString *)str;
+// method: DecompressBd
+- (BOOL)DecompressBd: (CkoBinData *)binData;
+// method: DecompressBdAsync
+- (CkoTask *)DecompressBdAsync: (CkoBinData *)binData;
 // method: DecompressBytes
 - (NSData *)DecompressBytes: (NSData *)bData;
 // method: DecompressBytesAsync

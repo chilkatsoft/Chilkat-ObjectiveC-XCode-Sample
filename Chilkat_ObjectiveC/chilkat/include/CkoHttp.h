@@ -1,13 +1,16 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Http
 // Wrapped Chilkat C++ class name =  CkHttp
 
 @class CkoHttpResponse;
 @class CkoTask;
+@class CkoBinData;
+@class CkoStringBuilder;
 @class CkoCert;
 @class CkoHashtable;
+@class CkoJsonObject;
 @class CkoHttpRequest;
 @class CkoStringArray;
 @class CkoDateTime;
@@ -41,6 +44,8 @@
 @property (nonatomic, copy) NSString *AcceptCharset;
 @property (nonatomic, copy) NSString *AcceptLanguage;
 @property (nonatomic) BOOL AllowGzip;
+@property (nonatomic) BOOL AllowHeaderFolding;
+@property (nonatomic, copy) NSString *AuthToken;
 @property (nonatomic) BOOL AutoAddHostHeader;
 @property (nonatomic, copy) NSString *AwsAccessKey;
 @property (nonatomic, copy) NSString *AwsEndpoint;
@@ -87,6 +92,7 @@
 @property (nonatomic, readonly, copy) NSString *LastResponseBody;
 @property (nonatomic, readonly, copy) NSString *LastResponseHeader;
 @property (nonatomic, readonly, copy) NSNumber *LastStatus;
+@property (nonatomic, readonly, copy) NSString *LastStatusText;
 @property (nonatomic, copy) NSNumber *LMFactor;
 @property (nonatomic, copy) NSString *Login;
 @property (nonatomic, copy) NSString *LoginDomain;
@@ -162,6 +168,8 @@
 - (void)ClearBgEventLog;
 // method: ClearInMemoryCookies
 - (void)ClearInMemoryCookies;
+// method: ClearUrlVars
+- (void)ClearUrlVars;
 // method: CloseAllConnections
 - (BOOL)CloseAllConnections;
 // method: CloseAllConnectionsAsync
@@ -180,6 +188,12 @@
 // method: DownloadAppendAsync
 - (CkoTask *)DownloadAppendAsync: (NSString *)url 
 	appendToPath: (NSString *)appendToPath;
+// method: DownloadBd
+- (BOOL)DownloadBd: (NSString *)url 
+	binData: (CkoBinData *)binData;
+// method: DownloadBdAsync
+- (CkoTask *)DownloadBdAsync: (NSString *)url 
+	binData: (CkoBinData *)binData;
 // method: DownloadHash
 - (NSString *)DownloadHash: (NSString *)url 
 	hashAlgorithm: (NSString *)hashAlgorithm 
@@ -188,6 +202,14 @@
 - (CkoTask *)DownloadHashAsync: (NSString *)url 
 	hashAlgorithm: (NSString *)hashAlgorithm 
 	encoding: (NSString *)encoding;
+// method: DownloadSb
+- (BOOL)DownloadSb: (NSString *)url 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
+// method: DownloadSbAsync
+- (CkoTask *)DownloadSbAsync: (NSString *)url 
+	charset: (NSString *)charset 
+	sb: (CkoStringBuilder *)sb;
 // method: EventLogName
 - (NSString *)EventLogName: (NSNumber *)index;
 // method: EventLogValue
@@ -254,6 +276,20 @@
 	contentType: (NSString *)contentType 
 	md5: (BOOL)md5 
 	gzip: (BOOL)gzip;
+// method: PBinaryBd
+- (CkoHttpResponse *)PBinaryBd: (NSString *)verb 
+	url: (NSString *)url 
+	data: (CkoBinData *)data 
+	contentType: (NSString *)contentType 
+	md5: (BOOL)md5 
+	gzip: (BOOL)gzip;
+// method: PBinaryBdAsync
+- (CkoTask *)PBinaryBdAsync: (NSString *)verb 
+	url: (NSString *)url 
+	data: (CkoBinData *)data 
+	contentType: (NSString *)contentType 
+	md5: (BOOL)md5 
+	gzip: (BOOL)gzip;
 // method: PostBinary
 - (NSString *)PostBinary: (NSString *)url 
 	byteData: (NSData *)byteData 
@@ -280,6 +316,14 @@
 - (CkoTask *)PostJson2Async: (NSString *)url 
 	contentType: (NSString *)contentType 
 	jsonText: (NSString *)jsonText;
+// method: PostJson3
+- (CkoHttpResponse *)PostJson3: (NSString *)url 
+	contentType: (NSString *)contentType 
+	json: (CkoJsonObject *)json;
+// method: PostJson3Async
+- (CkoTask *)PostJson3Async: (NSString *)url 
+	contentType: (NSString *)contentType 
+	json: (CkoJsonObject *)json;
 // method: PostUrlEncoded
 - (CkoHttpResponse *)PostUrlEncoded: (NSString *)url 
 	req: (CkoHttpRequest *)req;
@@ -306,6 +350,22 @@
 - (CkoTask *)PTextAsync: (NSString *)verb 
 	url: (NSString *)url 
 	textData: (NSString *)textData 
+	charset: (NSString *)charset 
+	contentType: (NSString *)contentType 
+	md5: (BOOL)md5 
+	gzip: (BOOL)gzip;
+// method: PTextSb
+- (CkoHttpResponse *)PTextSb: (NSString *)verb 
+	url: (NSString *)url 
+	textData: (CkoStringBuilder *)textData 
+	charset: (NSString *)charset 
+	contentType: (NSString *)contentType 
+	md5: (BOOL)md5 
+	gzip: (BOOL)gzip;
+// method: PTextSbAsync
+- (CkoTask *)PTextSbAsync: (NSString *)verb 
+	url: (NSString *)url 
+	textData: (CkoStringBuilder *)textData 
 	charset: (NSString *)charset 
 	contentType: (NSString *)contentType 
 	md5: (BOOL)md5 
@@ -344,10 +404,22 @@
 - (NSData *)QuickGet: (NSString *)url;
 // method: QuickGetAsync
 - (CkoTask *)QuickGetAsync: (NSString *)url;
+// method: QuickGetBd
+- (BOOL)QuickGetBd: (NSString *)url 
+	binData: (CkoBinData *)binData;
+// method: QuickGetBdAsync
+- (CkoTask *)QuickGetBdAsync: (NSString *)url 
+	binData: (CkoBinData *)binData;
 // method: QuickGetObj
 - (CkoHttpResponse *)QuickGetObj: (NSString *)url;
 // method: QuickGetObjAsync
 - (CkoTask *)QuickGetObjAsync: (NSString *)url;
+// method: QuickGetSb
+- (BOOL)QuickGetSb: (NSString *)url 
+	sbContent: (CkoStringBuilder *)sbContent;
+// method: QuickGetSbAsync
+- (CkoTask *)QuickGetSbAsync: (NSString *)url 
+	sbContent: (CkoStringBuilder *)sbContent;
 // method: QuickGetStr
 - (NSString *)QuickGetStr: (NSString *)url;
 // method: QuickGetStrAsync
@@ -420,6 +492,12 @@
 - (NSString *)S3_GenerateUrl: (NSString *)bucket 
 	path: (NSString *)path 
 	expire: (CkoDateTime *)expire;
+// method: S3_GenerateUrlV4
+- (NSString *)S3_GenerateUrlV4: (BOOL)useHttps 
+	bucketName: (NSString *)bucketName 
+	path: (NSString *)path 
+	numSecondsValid: (NSNumber *)numSecondsValid 
+	awsService: (NSString *)awsService;
 // method: S3_ListBucketObjects
 - (NSString *)S3_ListBucketObjects: (NSString *)bucketName;
 // method: S3_ListBucketObjectsAsync
@@ -478,6 +556,9 @@
 // method: SetSslClientCertPfx
 - (BOOL)SetSslClientCertPfx: (NSString *)pfxPath 
 	pfxPassword: (NSString *)pfxPassword;
+// method: SetUrlVar
+- (BOOL)SetUrlVar: (NSString *)name 
+	value: (NSString *)value;
 // method: SleepMs
 - (void)SleepMs: (NSNumber *)millisec;
 // method: SynchronousRequest

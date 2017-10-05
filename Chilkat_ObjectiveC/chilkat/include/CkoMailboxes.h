@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Mailboxes
 // Wrapped Chilkat C++ class name =  CkMailboxes
@@ -24,6 +24,7 @@
 - (void)clearCppImplObj;
 
 @property (nonatomic, readonly, copy) NSNumber *Count;
+@property (nonatomic) BOOL LastMethodSuccess;
 // method: GetFlags
 - (NSString *)GetFlags: (NSNumber *)index;
 // method: GetMailboxIndex

@@ -1,9 +1,11 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  HttpRequest
 // Wrapped Chilkat C++ class name =  CkHttpRequest
 
+@class CkoBinData;
+@class CkoStringBuilder;
 
 
 @interface CkoHttpRequest : NSObject {
@@ -58,6 +60,9 @@
 // method: AddHeader
 - (void)AddHeader: (NSString *)name 
 	value: (NSString *)value;
+// method: AddMwsSignature
+- (BOOL)AddMwsSignature: (NSString *)domain 
+	mwsSecretKey: (NSString *)mwsSecretKey;
 // method: AddParam
 - (void)AddParam: (NSString *)name 
 	value: (NSString *)value;
@@ -76,6 +81,8 @@
 - (BOOL)AddSubHeader: (NSNumber *)index 
 	name: (NSString *)name 
 	value: (NSString *)value;
+// method: GenerateRequestFile
+- (BOOL)GenerateRequestFile: (NSString *)path;
 // method: GenerateRequestText
 - (NSString *)GenerateRequestText;
 // method: GetHeaderField
@@ -92,10 +99,15 @@
 - (NSString *)GetParamValue: (NSNumber *)index;
 // method: GetUrlEncodedParams
 - (NSString *)GetUrlEncodedParams;
+// method: LoadBodyFromBd
+- (BOOL)LoadBodyFromBd: (CkoBinData *)requestBody;
 // method: LoadBodyFromBytes
 - (BOOL)LoadBodyFromBytes: (NSData *)binaryData;
 // method: LoadBodyFromFile
 - (BOOL)LoadBodyFromFile: (NSString *)path;
+// method: LoadBodyFromSb
+- (BOOL)LoadBodyFromSb: (CkoStringBuilder *)requestBody 
+	charset: (NSString *)charset;
 // method: LoadBodyFromString
 - (BOOL)LoadBodyFromString: (NSString *)bodyStr 
 	charset: (NSString *)charset;

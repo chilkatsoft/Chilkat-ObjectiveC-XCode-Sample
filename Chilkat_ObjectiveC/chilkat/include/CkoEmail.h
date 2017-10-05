@@ -1,13 +1,13 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Email
 // Wrapped Chilkat C++ class name =  CkEmail
 
+@class CkoBinData;
 @class CkoCert;
 @class CkoStringArray;
 @class CkoDateTime;
-@class CkoBinData;
 @class CkoStringBuilder;
 @class CkoCertChain;
 @class CkoTask;
@@ -58,11 +58,14 @@
 @property (nonatomic, readonly, copy) NSNumber *NumBcc;
 @property (nonatomic, readonly, copy) NSNumber *NumCC;
 @property (nonatomic, readonly, copy) NSNumber *NumDaysOld;
+@property (nonatomic, readonly, copy) NSNumber *NumDigests;
 @property (nonatomic, readonly, copy) NSNumber *NumHeaderFields;
 @property (nonatomic, readonly, copy) NSNumber *NumRelatedItems;
 @property (nonatomic, readonly, copy) NSNumber *NumReplacePatterns;
 @property (nonatomic, readonly, copy) NSNumber *NumReports;
 @property (nonatomic, readonly, copy) NSNumber *NumTo;
+@property (nonatomic, copy) NSString *OaepHash;
+@property (nonatomic) BOOL OaepPadding;
 @property (nonatomic) BOOL OverwriteExisting;
 @property (nonatomic, copy) NSString *Pkcs7CryptAlg;
 @property (nonatomic, copy) NSNumber *Pkcs7KeyLength;
@@ -77,6 +80,7 @@
 @property (nonatomic) BOOL SendSigned;
 @property (nonatomic, readonly) BOOL SignaturesValid;
 @property (nonatomic, readonly, copy) NSString *SignedBy;
+@property (nonatomic, copy) NSString *SigningAlg;
 @property (nonatomic, copy) NSString *SigningHashAlg;
 @property (nonatomic, readonly, copy) NSNumber *Size;
 @property (nonatomic, copy) NSString *Subject;
@@ -84,6 +88,10 @@
 @property (nonatomic) BOOL UnpackUseRelPaths;
 @property (nonatomic) BOOL VerboseLogging;
 @property (nonatomic, readonly, copy) NSString *Version;
+// method: AddAttachmentBd
+- (BOOL)AddAttachmentBd: (NSString *)filename 
+	binData: (CkoBinData *)binData 
+	contentType: (NSString *)contentType;
 // method: AddAttachmentHeader
 - (void)AddAttachmentHeader: (NSNumber *)index 
 	fieldName: (NSString *)fieldName 
@@ -133,6 +141,12 @@
 	password: (NSString *)password;
 // method: AddPlainTextAlternativeBody
 - (BOOL)AddPlainTextAlternativeBody: (NSString *)body;
+// method: AddRelatedBd
+- (NSString *)AddRelatedBd: (NSString *)filename 
+	binData: (CkoBinData *)binData;
+// method: AddRelatedBd2
+- (BOOL)AddRelatedBd2: (CkoBinData *)binData 
+	fileNameInHtml: (NSString *)fileNameInHtml;
 // method: AddRelatedData
 - (NSString *)AddRelatedData: (NSString *)fileName 
 	inData: (NSData *)inData;
@@ -161,9 +175,9 @@
 	str: (NSString *)str 
 	charset: (NSString *)charset;
 // method: AddRelatedString2
-- (void)AddRelatedString2: (NSString *)str 
-	charset: (NSString *)charset 
-	filenameInHtml: (NSString *)filenameInHtml;
+- (void)AddRelatedString2: (NSString *)filenameInHtml 
+	str: (NSString *)str 
+	charset: (NSString *)charset;
 // method: AddStringAttachment
 - (BOOL)AddStringAttachment: (NSString *)fileName 
 	str: (NSString *)str;
@@ -242,6 +256,9 @@
 - (NSString *)GenerateFilename;
 // method: GetAlternativeBody
 - (NSString *)GetAlternativeBody: (NSNumber *)index;
+// method: GetAlternativeBodyBd
+- (BOOL)GetAlternativeBodyBd: (NSNumber *)index 
+	binData: (CkoBinData *)binData;
 // method: GetAlternativeBodyByContentType
 - (NSString *)GetAlternativeBodyByContentType: (NSString *)contentType;
 // method: GetAlternativeContentType
@@ -261,6 +278,9 @@
 - (NSString *)GetAttachmentAttr: (NSNumber *)index 
 	fieldName: (NSString *)fieldName 
 	attrName: (NSString *)attrName;
+// method: GetAttachmentBd
+- (BOOL)GetAttachmentBd: (NSNumber *)index 
+	binData: (CkoBinData *)binData;
 // method: GetAttachmentContentID
 - (NSString *)GetAttachmentContentID: (NSNumber *)index;
 // method: GetAttachmentContentType
@@ -294,6 +314,8 @@
 - (NSString *)GetCcName: (NSNumber *)index;
 // method: GetDeliveryStatusInfo
 - (NSString *)GetDeliveryStatusInfo: (NSString *)fieldName;
+// method: GetDigest
+- (CkoEmail *)GetDigest: (NSNumber *)index;
 // method: GetDsnFinalRecipients
 - (CkoStringArray *)GetDsnFinalRecipients;
 // method: GetDt

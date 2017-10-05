@@ -1,11 +1,12 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  CertChain
 // Wrapped Chilkat C++ class name =  CkCertChain
 
 @class CkoCert;
 @class CkoTrustedRoots;
+@class CkoJsonObject;
 
 
 @interface CkoCertChain : NSObject {
@@ -38,6 +39,8 @@
 - (CkoCert *)GetCert: (NSNumber *)index;
 // method: IsRootTrusted
 - (BOOL)IsRootTrusted: (CkoTrustedRoots *)trustedRoots;
+// method: LoadX5C
+- (BOOL)LoadX5C: (CkoJsonObject *)jwk;
 // method: SaveLastError
 - (BOOL)SaveLastError: (NSString *)path;
 // method: VerifyCertSignatures

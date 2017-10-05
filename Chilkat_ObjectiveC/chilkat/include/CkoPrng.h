@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Prng
 // Wrapped Chilkat C++ class name =  CkPrng
 
+@class CkoBinData;
 
 
 @interface CkoPrng : NSObject {
@@ -42,6 +43,9 @@
 // method: GenRandom
 - (NSString *)GenRandom: (NSNumber *)numBytes 
 	encoding: (NSString *)encoding;
+// method: GenRandomBd
+- (BOOL)GenRandomBd: (NSNumber *)numBytes 
+	bd: (CkoBinData *)bd;
 // method: GenRandomBytes
 - (NSData *)GenRandomBytes: (NSNumber *)numBytes;
 // method: GetEntropy

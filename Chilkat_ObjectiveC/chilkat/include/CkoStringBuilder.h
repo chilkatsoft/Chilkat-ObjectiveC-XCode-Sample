@@ -1,9 +1,10 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  StringBuilder
 // Wrapped Chilkat C++ class name =  CkStringBuilder
 
+@class CkoBinData;
 
 
 @interface CkoStringBuilder : NSObject {
@@ -23,9 +24,15 @@
 - (void)clearCppImplObj;
 
 @property (nonatomic, copy) NSNumber *IntValue;
+@property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSNumber *Length;
 // method: Append
 - (BOOL)Append: (NSString *)value;
+// method: AppendBd
+- (BOOL)AppendBd: (CkoBinData *)binData 
+	charset: (NSString *)charset 
+	offset: (NSNumber *)offset 
+	numBytes: (NSNumber *)numBytes;
 // method: AppendEncoded
 - (BOOL)AppendEncoded: (NSData *)binaryData 
 	encoding: (NSString *)encoding;
@@ -33,12 +40,18 @@
 - (BOOL)AppendInt: (NSNumber *)value;
 // method: AppendInt64
 - (BOOL)AppendInt64: (NSNumber *)value;
+// method: AppendLine
+- (BOOL)AppendLine: (NSString *)value 
+	crlf: (BOOL)crlf;
 // method: AppendSb
 - (BOOL)AppendSb: (CkoStringBuilder *)sb;
 // method: Clear
 - (void)Clear;
 // method: Contains
 - (BOOL)Contains: (NSString *)str 
+	caseSensitive: (BOOL)caseSensitive;
+// method: ContainsWord
+- (BOOL)ContainsWord: (NSString *)word 
 	caseSensitive: (BOOL)caseSensitive;
 // method: ContentsEqual
 - (BOOL)ContentsEqual: (NSString *)str 
@@ -85,16 +98,26 @@
 // method: Prepend
 - (BOOL)Prepend: (NSString *)value;
 // method: Replace
-- (void)Replace: (NSString *)value 
+- (NSNumber *)Replace: (NSString *)value 
 	replacement: (NSString *)replacement;
+// method: ReplaceAllBetween
+- (BOOL)ReplaceAllBetween: (NSString *)beginMark 
+	endMark: (NSString *)endMark 
+	replacement: (NSString *)replacement 
+	replaceMarks: (BOOL)replaceMarks;
 // method: ReplaceBetween
 - (NSNumber *)ReplaceBetween: (NSString *)beginMark 
 	endMark: (NSString *)endMark 
 	value: (NSString *)value 
 	replacement: (NSString *)replacement;
+// method: ReplaceI
+- (NSNumber *)ReplaceI: (NSString *)value 
+	replacement: (NSNumber *)replacement;
 // method: ReplaceWord
 - (NSNumber *)ReplaceWord: (NSString *)value 
 	replacement: (NSString *)replacement;
+// method: SecureClear
+- (void)SecureClear;
 // method: SetNth
 - (BOOL)SetNth: (NSNumber *)index 
 	value: (NSString *)value 

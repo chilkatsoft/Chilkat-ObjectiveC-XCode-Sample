@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  Imap
 // Wrapped Chilkat C++ class name =  CkImap
@@ -419,6 +419,12 @@
 - (BOOL)Logout;
 // method: LogoutAsync
 - (CkoTask *)LogoutAsync;
+// method: MoveMessages
+- (BOOL)MoveMessages: (CkoMessageSet *)messageSet 
+	destFolder: (NSString *)destFolder;
+// method: MoveMessagesAsync
+- (CkoTask *)MoveMessagesAsync: (CkoMessageSet *)messageSet 
+	destFolder: (NSString *)destFolder;
 // method: Noop
 - (BOOL)Noop;
 // method: NoopAsync

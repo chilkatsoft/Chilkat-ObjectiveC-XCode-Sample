@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.62
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  SFtp
 // Wrapped Chilkat C++ class name =  CkSFtp
@@ -190,6 +190,12 @@
 	sb: (CkoStringBuilder *)sb;
 // method: Eof
 - (BOOL)Eof: (NSString *)sftpHandle;
+// method: FileExists
+- (NSNumber *)FileExists: (NSString *)remotePath 
+	followLinks: (BOOL)followLinks;
+// method: FileExistsAsync
+- (CkoTask *)FileExistsAsync: (NSString *)remotePath 
+	followLinks: (BOOL)followLinks;
 // method: GetFileCreateDt
 - (CkoDateTime *)GetFileCreateDt: (NSString *)filePathOrHandle 
 	bFollowLinks: (BOOL)bFollowLinks 
@@ -359,6 +365,10 @@
 	localFilePath: (NSString *)localFilePath;
 // method: SaveLastError
 - (BOOL)SaveLastError: (NSString *)path;
+// method: SendIgnore
+- (BOOL)SendIgnore;
+// method: SendIgnoreAsync
+- (CkoTask *)SendIgnoreAsync;
 // method: SetCreateDt
 - (BOOL)SetCreateDt: (NSString *)pathOrHandle 
 	bIsHandle: (BOOL)bIsHandle 

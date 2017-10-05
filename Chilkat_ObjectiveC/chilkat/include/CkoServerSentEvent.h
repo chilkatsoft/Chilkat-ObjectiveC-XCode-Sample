@@ -1,5 +1,5 @@
 // Chilkat Objective-C header.
-// This is a generated header file for Chilkat version 9.5.0.59
+// This is a generated header file for Chilkat version 9.5.0.69
 
 // Generic/internal class name =  ServerSentEvent
 // Wrapped Chilkat C++ class name =  CkServerSentEvent
@@ -25,6 +25,7 @@
 @property (nonatomic, readonly, copy) NSString *Data;
 @property (nonatomic, readonly, copy) NSString *EventName;
 @property (nonatomic, readonly, copy) NSString *LastEventId;
+@property (nonatomic) BOOL LastMethodSuccess;
 @property (nonatomic, readonly, copy) NSNumber *Retry;
 // method: LoadEvent
 - (BOOL)LoadEvent: (NSString *)eventText;
