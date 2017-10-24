@@ -35,9 +35,10 @@ int main(int argc, const char * argv[]) {
         
         global_unlock();
         
+        test_asyncFtpDownload();
         //test_ftpUpload();
         //test_httpDownload();
-        test_asyncHttpDownload();
+        //test_asyncHttpDownload();
 
         //NSLog(@"Hello, World!");
     }
